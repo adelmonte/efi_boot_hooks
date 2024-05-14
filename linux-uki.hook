@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = linux
+
+[Action]
+Description = Build ukify EFI file for Linux...
+When = PostTransaction
+Exec = /bin/bash -c "/etc/pacman.d/scripts/uki.sh"
+

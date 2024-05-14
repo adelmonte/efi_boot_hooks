@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = intel-ucode
+
+[Action]
+Description = Build ukify EFI file...
+When = PostTransaction
+Exec = /bin/bash -c "/etc/pacman.d/scripts/uki.sh"
