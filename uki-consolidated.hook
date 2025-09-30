@@ -1,0 +1,14 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = linux-cachyos
+Target = systemd
+Target = intel-ucode
+Target = systemd-boot
+Target = linux-firmware
+
+[Action]
+Description = Build ukify EFI file for kernel updates
+When = PostTransaction
+Exec = /bin/bash -c "/etc/pacman.d/scripts/uki.sh"
